@@ -11,5 +11,5 @@ routes.post('/products', ProductController.store);
 routes.put('/products/:id', ProductController.update);
 routes.delete('/products/:id', ProductController.destroy); 
 // Equity
-routes.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo', EquityController.index);
+routes.get('/equity/:function/:symbol', EquityController.index);
 module.exports = routes;
